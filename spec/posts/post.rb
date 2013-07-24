@@ -1,3 +1,4 @@
+require './lib/post/post'
 require 'tester'
 
 Tester.describe Post do
@@ -11,13 +12,13 @@ Tester.describe Post do
     Tester.it "sets message argument" do
       message = "The first blog app without using gems"
       post = Post.new(message: message)
-      post.message.should_eq(title)
+      post.message.should_eq(message)
     end
 
     Tester.it "sets author argument" do
       author = "Cesar Navarro"
-      post = Post.new(title: title)
-      post.author.should_eq(title)
+      post = Post.new(author: author)
+      post.author.should_eq(author)
     end
   end
 end
